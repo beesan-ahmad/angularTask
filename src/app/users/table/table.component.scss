@@ -1,0 +1,41 @@
+.table{
+  color: black;
+  margin-inline: 40px;
+  background-color: #f2f2f2;
+}
+input[type=button], select {
+  display: block;
+  position: absolute;
+  left: 95%;
+  transform: translateY(-180%) translateX(-90%);
+
+  //**********************************
+  height: 27px;
+  line-height: 27px;
+  width: 27px;
+  font-size: 1.5em;
+
+  border-radius: 50%;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+#delete{
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+  font-size: 1.5em;
+
+  border-radius: 30%;
+  background-color: red;
+  color: white;
+  text-align: center;
+  cursor: no-drop;
+}
+#edit{
+  background-color: gray;
+  color: white;
+  border-radius: 20%;
+  cursor: initial;
+}

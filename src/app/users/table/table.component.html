@@ -1,0 +1,35 @@
+<div>
+    <h1>Users </h1>
+
+</div>
+
+<!--<div > <a id="myAnchor" href="http://localhost:4200/users/form">See More</a></div>-->
+<input type="button" onclick="location.href='http://localhost:4200/users/form';" value="+" />
+<div class="table"><table border="0.5">
+<thead>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Dob</th>
+      <th> </th>
+
+
+
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let user of service.UserList">
+      <td>#</td>
+      <td>{{user.name}}</td>
+
+    <!--<td>{{user.dateOfBirthday}}</td>-->
+      <td>{{user.dateOfBirthday |callAge}}</td>
+      <td> {{user.dateOfBirthday| date }}</td>
+
+      <td><button id="edit" (click)="UserToUpdate">Edit</button></td>
+      <td><button id="delete" (click)="deleteUser(user)">x</button></td>
+    </tr>
+</tbody>
+</table>
+</div>

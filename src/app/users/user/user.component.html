@@ -1,0 +1,75 @@
+<h1>Add User</h1>
+<div class="form">
+
+
+
+    <form #form="ngForm"(ngSubmit)="addUser(form)">
+      <div class="row">
+        <div class="label-class" >
+                <label>Name</label>
+          <span *ngIf="form.form.controls['name']?.touched
+            && ! form.form.controls['name']?.valid">*</span>
+
+        </div>
+      <div class="input-class">
+            <input required type="text" [(ngModel)]="NewUser.name" name ="name" >
+
+
+      </div>
+      </div>
+     <!-- <div>
+        <label>Year</label>
+        <br>
+        <input type="text" [(ngModel)]="NewUser.year" name ="year" >
+        <input type="button" value="Get Age" (click)= "onSubmit()" >
+        <br>
+      </div>-->
+
+      <div class="row">
+        <div class="label-class">
+      <label > date of birth  </label>
+
+        </div>
+        <div class="input-class">
+      <input type="date" [(ngModel)]="NewUser.dateOfBirthday" name="date of birthday" >
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="label-class">
+            <label>Email</label>
+          <span *ngIf="form.form.controls['email']?.touched
+            && ! form.form.controls['email']?.valid">*</span>
+
+        </div>
+        <div class="input-class">
+            <input required type="email" [(ngModel)]="NewUser.email" name ="email" email >
+
+        </div>
+
+        </div>
+      <div class="row">
+
+        <div class="input-class">
+
+          <input required type="password" [(ngModel)]="NewUser.password" name ="password" >
+
+        </div>
+        <div class="label-class">
+          <label>Password</label>
+          <span *ngIf ="form.form.controls['password']?.touched
+           && !form.form.controls['password']?.valid">*</span>
+
+
+        </div>
+
+
+        </div>
+
+      <div class="row">
+
+        <button id="add" type="submit">Add</button>
+      </div>
+            </form>
+
+        </div>

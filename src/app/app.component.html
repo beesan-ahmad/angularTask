@@ -1,0 +1,60 @@
+
+
+
+<nav>
+<!--<a routerLink="/form" routerLinkActive="active">Form</a>
+<a routerLink="/table" routerLinkActive="active"><Table></Table></a>-->
+</nav>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+<div class="head">
+<h2>APP LOGO</h2>
+
+
+</div>
+
+    <div class="main">
+
+        <div class="left">
+            <button routerLink="/users/List" >Users</button>
+         <!-- <button routerLink="/users/table" >table</button>-->
+          <button routerLink="/users/table" >Posts</button>
+          <button routerLink="/users/List" >Settings</button>
+
+        </div>
+        <div class="right">
+            <router-outlet></router-outlet>
+
+
+
+    </div>
+</div>
+    <div class="footer">
+        footer section
+    </div>
+    <script>
+
+        function Add(){
+
+            var list= document.getElementById("List");
+            list.innerHTML+="<li> new line</li>"
+
+
+        }
+        function Remove(){
+            var list= document.getElementById("List");
+            list.innerHTML="";
+
+
+        }
+        </script>
+
+</body>
